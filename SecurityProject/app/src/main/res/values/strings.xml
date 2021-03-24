@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Security</string>
+    <string name="security_methods">Security Methods</string>
+    <string name="method_1">Caesar Cipher</string>
+    <string name="method_2">PlayFair Cipher</string>
+    <string name="method_3">Transposition Cipher</string>
+    <string name="method_4">RSA</string>
+    <string name="method_1_description">The Caesar Cipher technique is one of the earliest and simplest method of encryption technique. It’s simply a type of substitution cipher, i.e., each letter of a given text is replaced by a letter some fixed number of positions down the alphabet. For example with a shift of 1, A would be replaced by B, B would become C, and so on. The method is apparently named after Julius Caesar, who apparently used it to communicate with his officials.
+Thus to cipher a given text we need an integer value, known as shift which indicates the number of position each letter of the text has been moved down.
+The encryption can be represented using modular arithmetic by first transforming the letters into numbers, according to the scheme, A = 0, B = 1,…, Z = 25. Encryption of a letter by a shift n can be described mathematically as.
+E_n(x)=(x+n)mod\ 26
+(Encryption Phase with shift n)
+D_n(x)=(x-n)mod\ 26
+(Decryption Phase with shift n)</string>
+    <string name="method_2_description">The Playfair cipher or Playfair square or Wheatstone–Playfair cipher is a manual symmetric encryption technique and was the
+        first literal digram substitution cipher. The scheme was invented in 1854 by Charles Wheatstone, but bears the name of Lord Playfair for promoting its use.
+The technique encrypts pairs of letters (bigrams or digrams), instead of single letters as in the simple substitution cipher and rather more complex Vigenère cipher systems
+        then in use.
+        The Playfair is thus significantly harder to break since the frequency analysis used for simple substitution ciphers does not work with it.
+        The frequency analysis of bigrams is possible, but considerably more difficult. With 600[1] possible
+        bigrams rather than the 26 possible monograms (single symbols, usually letters in this context), a considerably larger cipher text is required in order to be useful.</string>
+    <string name="method_3_description">transposition cipher is a method of encryption by which the positions held by
+        units of plaintext (which are commonly characters or groups of characters) are shifted according to a regular system,
+        so that the ciphertext constitutes a permutation of the plaintext. That is, the order of the units is changed
+        (the plaintext is reordered). Mathematically a bijective function is used on the characters\'
+        positions to encrypt and an inverse function to decrypt.</string>
+    <string name="method_4_description">RSA (Rivest–Shamir–Adleman) is a public-key cryptosystem that is widely used for secure data transmission. It is also one of the oldest. The acronym RSA comes from the surnames of Ron Rivest, Adi Shamir, and Leonard Adleman, who publicly described the algorithm in 1977. An equivalent system was developed secretly, in 1973 at GCHQ (the British signals intelligence agency), by the English mathematician Clifford Cocks. That system was declassified in 1997
+In a public-key cryptosystem, the encryption key is public and distinct from the decryption key, which is kept secret (private). An RSA user creates and publishes a public key based on two large prime numbers, along with an auxiliary value. The prime numbers are kept secret. Messages can be encrypted by anyone, via the public key, but can only be decoded by someone who knows the prime numbers.
+The security of RSA relies on the practical difficulty of factoring the product of two large prime numbers, the "factoring problem". Breaking RSA encryption is known as the RSA problem. Whether it is as difficult as the factoring problem is an open question.[3] There are no published methods to defeat the system if a large enough key is used.
+RSA is a relatively slow algorithm. Because of this, it is not commonly used to directly encrypt user data. More often, RSA is used to transmit shared keys for symmetric key cryptography, which are then used for bulk encryption-decryption.</string>
+    <string name="encrypt">Encryption</string>
+    <string name="decrypt">Decryption</string>
+    <string name="profile">My Profile</string>
+    <string name="send_method_name">Method Name</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

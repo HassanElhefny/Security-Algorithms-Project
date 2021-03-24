@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_700"
+    android:orientation="vertical"
+    tools:context=".Playfair.Playfair_Encryption">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center"
+        android:text="Encryption"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Key"
+        app:counterEnabled="true"
+        app:counterMaxLength="25"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/white"
+        app:expandedHintEnabled="true"
+        app:helperText="Required"
+        app:helperTextTextColor="@color/white"
+        app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/playfair_encryption_et_key"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:lineSpacingExtra="4dp"
+            android:maxLength="25" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Message"
+        android:nestedScrollingEnabled="true"
+        app:counterEnabled="true"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/white"
+        app:expandedHintEnabled="true"
+        app:helperTextTextColor="@color/white"
+        app:helperText="should be even characters"
+        app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/playfair_encryption_et_original_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fallbackLineSpacing="true"
+            android:inputType="textMultiLine|textAutoCorrect|textAutoComplete"
+            android:lineSpacingExtra="4dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:textIsSelectable="true"
+        android:id="@+id/playfair_encryption_tv_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Matrix Key Will Show Here"
+        android:textSize="18sp" />
+    <TextView
+        android:textIsSelectable="true"
+        android:id="@+id/playfair_encryption_tv_cipher_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Encrypted Message Will Show Here"
+        android:textSize="18sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/playfair_encryption_btn_encrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="encrypt"
+        app:cornerRadius="10dp" />
+
+</LinearLayout>

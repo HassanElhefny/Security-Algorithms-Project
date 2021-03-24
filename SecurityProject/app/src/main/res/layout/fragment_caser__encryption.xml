@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_700"
+    android:orientation="vertical"
+    tools:context=".Caser.Caser_Encryption">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center"
+        android:text="Encryption"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Key"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/white"
+        app:expandedHintEnabled="true"
+        app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/caser_fragment_encryption_key"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:maxLength="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:hint="Message"
+        android:nestedScrollingEnabled="true"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/white"
+        app:expandedHintEnabled="true"
+        app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/caser_fragment_encryption_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fallbackLineSpacing="true"
+            android:inputType="textMultiLine|textAutoCorrect|textAutoComplete"
+            android:lineSpacingExtra="4dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:textIsSelectable="true"
+        android:id="@+id/caser_fragment_encryption_tv_decrypted_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="Encrypted Message Will Show Here"
+        android:textSize="18sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/caser_fragment_encryption_btn_encrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="encrypt"
+        app:cornerRadius="10dp" />
+</LinearLayout>
